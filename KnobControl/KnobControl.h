@@ -2,7 +2,7 @@
 //  KnobControl.h
 //  KnobControl
 //
-//  Created by Blazej SLEBODA on 16/07/2018.
+//  Created by MaxLeboda on 16/07/2018.
 //  Copyright © 2018 MaxLeboda. All rights reserved.
 //
 

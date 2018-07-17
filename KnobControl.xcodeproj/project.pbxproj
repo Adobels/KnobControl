@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		FF86171A20FD3D0600B557FD /* KnobControl.h in Headers */ = {isa = PBXBuildFile; fileRef = FF86171820FD3D0600B557FD /* KnobControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF86172120FD440600B557FD /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86172020FD440600B557FD /* Knob.swift */; };
+		FF86172320FE8C9100B557FD /* KnobRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86172220FE8C9100B557FD /* KnobRenderer.swift */; };
+		FF86172520FE8D8E00B557FD /* RotationGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86172420FE8D8E00B557FD /* RotationGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF86171520FD3D0600B557FD /* KnobControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KnobControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF86171820FD3D0600B557FD /* KnobControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnobControl.h; sourceTree = "<group>"; };
 		FF86171920FD3D0600B557FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF86172020FD440600B557FD /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
+		FF86172220FE8C9100B557FD /* KnobRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobRenderer.swift; sourceTree = "<group>"; };
+		FF86172420FE8D8E00B557FD /* RotationGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,9 @@
 		FF86171720FD3D0600B557FD /* KnobControl */ = {
 			isa = PBXGroup;
 			children = (
+				FF86172020FD440600B557FD /* Knob.swift */,
+				FF86172220FE8C9100B557FD /* KnobRenderer.swift */,
+				FF86172420FE8D8E00B557FD /* RotationGestureRecognizer.swift */,
 				FF86171820FD3D0600B557FD /* KnobControl.h */,
 				FF86171920FD3D0600B557FD /* Info.plist */,
 			);
@@ -95,6 +104,7 @@
 				TargetAttributes = {
 					FF86171420FD3D0600B557FD = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -130,6 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF86172320FE8C9100B557FD /* KnobRenderer.swift in Sources */,
+				FF86172520FE8D8E00B557FD /* RotationGestureRecognizer.swift in Sources */,
+				FF86172120FD440600B557FD /* Knob.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +272,7 @@
 		FF86171E20FD3D0600B557FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -275,6 +289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxleboda.KnobControl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +298,7 @@
 		FF86171F20FD3D0600B557FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
