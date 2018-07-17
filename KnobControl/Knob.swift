@@ -1,17 +1,17 @@
 import UIKit
 
-class Knob: UIControl {
+public class Knob: UIControl {
   /** Contains the minimum value of the receiver. */
-  var minimumValue: Float = 0
+  public var minimumValue: Float = 0
 
   /** Contains the maximum value of the receiver. */
-  var maximumValue: Float = 1
+  public var maximumValue: Float = 1
 
   /** Contains the receiver’s current value. */
-  private (set) var value: Float = 0
+  public  private (set) var value: Float = 0
 
   /** Sets the receiver’s current value, allowing you to animate the change visually. */
-  func setValue(_ newValue: Float, animated: Bool = false) {
+  public func setValue(_ newValue: Float, animated: Bool = false) {
     value = min(maximumValue, max(minimumValue, newValue))
 
     let angleRange = endAngle - startAngle
@@ -22,40 +22,39 @@ class Knob: UIControl {
 
   /** Contains a Boolean value indicating whether changes
    in the sliders value generate continuous update events. */
-  var isContinuous = true
+  public var isContinuous = true
 
   private let renderer = KnobRenderer()
 
   /** Specifies the width in points of the knob control track. Defaults to 2 */
-  var lineWidth: CGFloat {
+  public var lineWidth: CGFloat {
     get { return renderer.lineWidth }
     set { renderer.lineWidth = newValue }
   }
 
   /** Specifies the angle of the start of the knob control track. Defaults to -11π/8 */
-  var startAngle: CGFloat {
+  public var startAngle: CGFloat {
     get { return renderer.startAngle }
     set { renderer.startAngle = newValue }
   }
 
   /** Specifies the end angle of the knob control track. Defaults to 3π/8 */
-  var endAngle: CGFloat {
+  public var endAngle: CGFloat {
     get { return renderer.endAngle }
     set { renderer.endAngle = newValue }
   }
 
   /** Specifies the length in points of the pointer on the knob. Defaults to 6 */
-  var pointerLength: CGFloat {
+  public var pointerLength: CGFloat {
     get { return renderer.pointerLength }
     set { renderer.pointerLength = newValue }
   }
 
-  override init(frame: CGRect) {
+override public init(frame: CGRect) {
     super.init(frame: frame)
     commonInit()
   }
-
-  required init?(coder aDecoder: NSCoder) {
+required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     commonInit()
   }
