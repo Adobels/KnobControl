@@ -1,6 +1,6 @@
 import UIKit
 
-public class Knob: UIControl {
+@IBDesignable public class Knob: UIControl {
   /** Contains the minimum value of the receiver. */
   public var minimumValue: Float = 0
 
@@ -27,7 +27,7 @@ public class Knob: UIControl {
   private let renderer = KnobRenderer()
 
   /** Specifies the width in points of the knob control track. Defaults to 2 */
-  public var lineWidth: CGFloat {
+  @IBInspectable public var lineWidth: CGFloat {
     get { return renderer.lineWidth }
     set { renderer.lineWidth = newValue }
   }
@@ -45,7 +45,7 @@ public class Knob: UIControl {
   }
 
   /** Specifies the length in points of the pointer on the knob. Defaults to 6 */
-  public var pointerLength: CGFloat {
+  @IBInspectable public var pointerLength: CGFloat {
     get { return renderer.pointerLength }
     set { renderer.pointerLength = newValue }
   }
@@ -101,4 +101,12 @@ required public init?(coder aDecoder: NSCoder) {
       }
     }
   }
+}
+
+extension Knob {
+    public override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        
+        renderer.updateBounds(bounds)
+    }
 }
