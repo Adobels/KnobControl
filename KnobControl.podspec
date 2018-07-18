@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "10.0"
 
-  s.source       = { :git => "https://github.com/Adobels/KnobControl", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/Adobels/KnobControl.git", :tag => "#{s.version}" }
   s.swift_version = "4.1"
 
   s.source_files  = "KnobControl"
